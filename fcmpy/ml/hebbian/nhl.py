@@ -107,11 +107,11 @@ class NHL(HebbianLearning):
                                                                     state_vector_current=s_new, thresh=thresh):
 
                 print(f'The NHL learning process converged at step {_} with the learning rate eta = {eta} and decay = {gamma}!')
-                return w_new
+                return { "weights": w_new, "iterations": _, "converged": True }
             else:
                 s_prior = s_new
                 w_prior = w_new
         
         if _ >= iterations-1:
             warnings.warn('The NHL did not converge! Consider a different set of parameters.')
-            return w_new
+            return { "weights": w_new, "iterations": _, "converged": False }
