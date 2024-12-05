@@ -1,4 +1,4 @@
-# FCMpy: A package for Constructing and Analysing Fuzzy Cognitive Maps in Python.
+# FCMpy: A package for Constructing and Analysing Fuzzy Cognitive Maps in Python. 
 <div align = justify>
 
 The fcmpy is Python package for automatically generating causal weights for fuzzy cognitive maps based on qualitative inputs (by using fuzzy logic), optimizing the FCM connection matrix via Machine Learning Algorithms and testing <em>what-if</em> scenarios. The package includes the following submodules:
@@ -14,12 +14,17 @@ The fcmpy is Python package for automatically generating causal weights for fuzz
 
 Read more about the package at: https://arxiv.org/abs/2111.12749 
 
+
 <a href="expert_based_fcm\expert_fcm.md"> The ExpertFcm module </a> includes methods for deriving causal weights of an FCM based on qualitative data. <br> 
 <a href="simulator\simulator.md"> The FcmSimulator module </a> provides methods for running simulations on top of a given FCM structure. <br>
 <a href="intervention\intervention.md"> The FcmIntervention module </a> allows testing what-if scenarios on top of the specified FCMs. <br>
 
+## Tutorials and documentation
+
+Tutorials and documentation can be found at: https://maxiuw.github.io/fcmpyhtml
+
 ## Installation
-FCMpy requires python >=3.8.1 and depends on:
+FCMpy requires python >=3.8.1 (*) and depends on:
 
 * pandas>=1.0.3
 * numpy>=numpy==1.18.2
@@ -27,7 +32,9 @@ FCMpy requires python >=3.8.1 and depends on:
 * tqdm>=4.50.2
 * openpyxl
 
-and will soon be available on PyPi! The latest version can be installed by:
+(*) we tested our library on Python 3.8. Some of the dependencies (e.g. Tensorflow) may not work properly if you use higher version of Python. Therefore, we encourage users to create a virtual environment (e.g. Conda env) with Python 3.8 and then _pip install_ our package.
+
+FCMpy is available on PyPi! The latest version can be installed by:
 
 ```
 pip install fcmpy
@@ -38,7 +45,7 @@ Alternatively, you can install it from source or develop this package, you can f
 ```
 py -m pip install --user --upgrade setuptools wheel
 py setup.py sdist bdist_wheel
-py -m pip install install e . 
+py -m pip install e . 
 ```
 
 You can run the unittest for the package as follows:
